@@ -2,126 +2,124 @@
 
 ## What this project is about
 
-This project is a simple traffic dashboard that helps people understand how busy a road is at different times of the day and week. It looks at traffic information such as the number of vehicles, the type of vehicles, and traffic patterns over time.
+This project helps people understand how busy a road is at different times of the day and week. It takes traffic data, turns it into charts, and shows a simple picture of road conditions.
 
-The goal is to make traffic data easier to read and use, even for people who are not familiar with technical tools or data analysis.
+Instead of reading a large spreadsheet, users can quickly see:
 
-## Why this matters
+- whether traffic is light, normal, or heavy
+- how many vehicles are on the road
+- which types of vehicles are most common
+- how traffic changes across a week
+- whether a different route or time might be better
 
-Traffic affects everyone:
+## Why this project matters
 
-- People commuting to work or school
-- Drivers planning their route
-- City planners trying to reduce congestion
-- Transport teams monitoring road conditions
-
-This dashboard helps answer questions like:
+Traffic affects everyone every day. People want to know:
 
 - Is the road busy right now?
-- Which times of the day are the busiest?
+- Will it take longer to travel during peak hours?
 - Are cars, bikes, buses, or trucks making up most of the traffic?
-- Is there a better time or route to travel?
+- Is there a better time to travel?
 
-## What the app does
+This dashboard makes that information easier to understand and use.
 
-The dashboard lets a user:
+## What the dashboard shows
 
-- Choose a date and time
-- Pick a road or route
-- View how much traffic there is
-- See what types of vehicles are using the road
-- Review weekly traffic trends
-- Check if road conditions are normal, light, or heavy
-- Get a simple suggestion for a better route or travel time
+The app includes:
 
-## Main features
+- a date selector
+- a time selector
+- a road selector
+- a pie chart showing vehicle distribution
+- a weekly traffic bar chart
+- a weekday traffic line chart
+- a traffic status message such as normal, heavy, or light
+- simple suggestions for travel planning
 
-### Easy traffic overview
-Users can look at a road's traffic at a specific time and instantly see whether traffic is light, normal, or heavy.
+## Simple example
 
-### Vehicle breakdown
-The app shows how much of the traffic is made up of:
+If a user selects a road and time, the dashboard can show:
 
-- Cars
-- Bikes
-- Buses
-- Trucks
+- 45% cars
+- 30% bikes
+- 15% buses
+- 10% trucks
 
-This helps users understand the type of traffic on the road.
+It can also tell the user that traffic is heavy and suggest taking an alternate route or traveling at another time.
 
-### Weekly pattern view
-The dashboard shows how traffic changes throughout the week so users can spot busy days and quieter days.
+## Project structure
 
-### Prediction and guidance
-Based on the current traffic data, the app can suggest whether a different route or travel time would be better.
+This repository contains:
+
+- `README.md` — project guide
+- `Traffic_Analysis.ipynb` — main notebook that builds the dashboard
+- `filtered_output_updated.csv` — traffic dataset used by the project
+
+## Technologies used
+
+This project uses:
+
+- Python
+- Pandas for data handling
+- Dash for the interactive web dashboard
+- Plotly for charts and visualizations
+- Jupyter Notebook for development and execution
 
 ## How to run the project
 
 ### 1. Install Python
-Make sure Python 3.7 or newer is installed on your computer.
+Make sure Python 3.7 or newer is installed.
 
-### 2. Install the required tools
+### 2. Install the required libraries
 Open a terminal and run:
 
 ```bash
-pip install dash plotly pandas
+pip install dash plotly pandas jupyter
 ```
 
-These are the main libraries used to build the dashboard and display charts.
-
-### 3. Prepare the traffic data
-The project expects a CSV file containing traffic information. In this repository, the file is named:
-
-```text
-filtered_output_updated.csv
-```
-
-If the file is located somewhere else, update the file path in the script so Python can find it.
-
-### 4. Start the app
-Run:
+### 3. Open the notebook
+Start Jupyter Notebook:
 
 ```bash
-python app.py
+jupyter notebook
 ```
 
-After the app starts, it will open a local web page in your browser at:
+Then open the file:
 
 ```text
-http://127.0.0.1:8050/
+Traffic_Analysis.ipynb
 ```
 
-## How to use the dashboard
+### 4. Run all notebook cells
+When the notebook opens, run every cell in order. The dashboard will build and load in the browser.
 
-1. Open the app in your browser.
+## How to use the app
+
+1. Open the dashboard in your browser.
 2. Select a date.
 3. Choose a time.
 4. Pick a road.
-5. Click the button to analyze the traffic.
-6. Review the charts and status summary.
-7. Use the results to decide whether to travel now or wait for a better time.
+5. Click the Analyze button.
+6. Review the charts and traffic status.
+7. Use the result to decide whether to travel now or wait.
 
-## Simple example of what you will see
+## What makes this useful
 
-- A pie chart showing the mix of vehicles on the selected road
-- A bar chart showing traffic volume across the week
-- A line chart showing how traffic changes from weekday to weekday
-- A status label showing whether the road is currently normal, heavy, or light
+This project is helpful for:
 
-## Who this project is for
+- commuters who want to avoid traffic
+- local transport teams monitoring road conditions
+- students learning about traffic data analysis
+- anyone who wants to understand road patterns through simple visuals
 
-This project is useful for:
+## Important note
 
-- Everyday commuters
-- Local transport planners
-- Traffic monitoring teams
-- Students learning about data analysis
-- Anyone who wants to understand traffic patterns more clearly
+This project uses a CSV dataset and is designed for analysis and visualization. It does not connect to live traffic sensors or real-time city traffic systems.
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Summary
 
-In simple terms, this project turns raw traffic data into clear, visual information that anyone can understand. It helps people quickly see when roads are busy, what kind of vehicles are using them, and whether a different time or route might be better.
+This project turns raw traffic information into a simple dashboard so people can understand road conditions at a glance. It helps answer basic travel questions quickly and clearly, without needing to read complex data tables.
